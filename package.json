@@ -1,0 +1,43 @@
+{
+  "name": "vuejs-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack:prod": "npm run webpack:clean && webpack -p",
+    "webpack": "webpack",
+    "webpack:clean": "rm -rf ./src/public/js",
+    "webpack:dev": "webpack-dev-server",
+    "dev": "concurrently \"nodemon ./src/server.js --ignore app/ \" \" webpack -w\"",
+    "start": "node ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.17.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.7",
+    "jquery": "^3.2.1",
+    "nodemon": "^1.12.1",
+    "toastr": "^2.1.2",
+    "vue": "^2.5.8",
+    "vue-axios": "^2.0.2",
+    "vue-loader": "^13.5.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.8",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.5",
+    "morgan": "^1.9.0"
+  }
+}
